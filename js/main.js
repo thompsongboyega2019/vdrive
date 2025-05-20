@@ -1,9 +1,4 @@
-/*============================================================
-Template Name   : Logisto
-Description     : Logistics And Transportation HTML5 Template
-Author          : LunarTemp
-Version         : 1.0
-==============================================================*/
+
 
 
 (function ($) {
