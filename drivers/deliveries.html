@@ -15,13 +15,10 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Vedrive - Order Details</title>
+    <title>Vedrive - My Deliveries</title>
 
     <!-- Canonical SEO -->
-    <meta
-      name="description"
-      content="Vedrive - Logistics Made Easy"
-    />
+    <meta name="description" content="Vedrive - Logistics Made Easy" />
 
     <meta
       name="keywords"
@@ -67,12 +64,9 @@
       rel="stylesheet"
       href="../vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css"
     />
-    <link rel="stylesheet" href="../vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
-
 
     <!-- Page CSS -->
 
-   
     <link
       rel="stylesheet"
       href="../vendor/css/pages/app-logistics-dashboard.css"
@@ -129,54 +123,34 @@
               </a>
             </li>
 
-            <!-- Layouts -->
-            <li class="menu-item active open">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon icon-base bx bx-cart-alt"></i>
-                <div>Orders</div>
-              </a>
-
-              <ul class="menu-sub">
-                <li class="menu-item active">
-                  <a href="view-orders.html" class="menu-link">
-                    <div>View Orders</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="create-new-order.html" class="menu-link">
-                    <div>Create New Order</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="order-history.html" class="menu-link">
-                    <div>Order History</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
             <!-- Front Pages -->
-            <li class="menu-item">
-              <a href="tracking.html" class="menu-link">
-                <i class="menu-icon icon-base bx bx-map-pin"></i>
-                <div>Tracking</div>
+            <li class="menu-item active">
+              <a href="deliveries.html" class="menu-link">
+                <i class="menu-icon icon-base bx bx-cart-alt"></i>
+                <div>My Deliveries</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="transactions.html" class="menu-link">
-                <i class="menu-icon icon-base bx bx-money"></i>
-                <div>Transactions</div>
+              <a href="#" class="menu-link">
+                <i class="menu-icon icon-base bx bx-map-pin"></i>
+                <div>Deliveries Start/End</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="help.html" class="menu-link">
-                <i class="menu-icon icon-base bx bx-support"></i>
-                <div>Help</div>
+              <a href="#" class="menu-link">
+                <i class="menu-icon icon-base bx bx-bxs-map"></i>
+                <div>Map</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="profile.html" class="menu-link">
+              <a href="#" class="menu-link">
+                <i class="menu-icon icon-base bx bx-list-check"></i>
+                <div>History</div>
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">
                 <i class="menu-icon icon-base bx bx-user"></i>
                 <div>Profile</div>
               </a>
@@ -369,7 +343,7 @@
                             <div class="flex-shrink-0 me-3">
                               <div class="avatar">
                                 <img
-                                  src="../images/avatars/2.png"
+                                  src="img/avatars/2.png"
                                   alt
                                   class="rounded-circle"
                                 />
@@ -448,7 +422,7 @@
                           </div>
                           <div class="flex-grow-1">
                             <h6 class="mb-0">John Doe</h6>
-                            <small class="text-body-secondary">Customer</small>
+                            <small class="text-body-secondary">Driver</small>
                           </div>
                         </div>
                       </a>
@@ -487,111 +461,68 @@
           <div class="content-wrapper">
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-6 row-gap-4">
-                <div class="d-flex flex-column justify-content-center">
-                  <div class="mb-1"><span class="h5">Order #32543 </span><span class="badge bg-label-success me-1 ms-2">Paid</span> <span class="badge bg-label-info">Delivered</span></div>
-                  <p class="mb-0">Mar 10, 2025<span id="orderYear"></span>, 5:48pm (WAT)</p>
-                </div>
-                
-              </div>
-              <div class="row">
-                <div class="col-12 col-lg-8">
-                  <div class="card mb-6">
-                    <div class="card-header">
-                      <h5 class="card-title m-0">Logistics activity</h5>
-                    </div>
-                    <div class="card-body pt-1">
-                      <ul class="timeline pb-0 mb-0">
-                        <li class="timeline-item timeline-item-transparent border-primary">
-                          <span class="timeline-point timeline-point-primary"></span>
-                          <div class="timeline-event">
-                            <div class="timeline-header">
-                              <h6 class="mb-0">Order was placed (Order ID: #32543)</h6>
-                              <small class="text-body-secondary">Tuesday 11:29 AM</small>
+              <!-- Bootstrap Table with Header - Dark -->
+              <div class="card">
+                <h5 class="card-header">Deliveries</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Pickup Address</th>
+                        <th>Destination</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td>
+                          <i
+                            class="icon-base fab fa-angular icon-md text-danger me-4"
+                          ></i>
+                          <span>#32543 </span>
+                        </td>
+                        <td>
+                          <i
+                            class="icon-base fab fa-angular icon-md text-danger me-4"
+                          ></i>
+                          <span>Mar 2, 2025 - 08:00am</span>
+                        </td>
+                        <td>No 27, Adekunle Ishola Street, Ketu</td>
+                        <td>Lekki Phase 2, Lagos Island</td>
+                        <td>
+                          <span class="badge bg-label-success me-1"
+                            >Delivered</span
+                          >
+                        </td>
+                        <td>
+                          <div class="dropdown">
+                            <button
+                              type="button"
+                              class="btn p-0 dropdown-toggle hide-arrow"
+                              data-bs-toggle="dropdown"
+                            >
+                              <i
+                                class="icon-base bx bx-dots-vertical-rounded"
+                              ></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="delivery-details.html"
+                                ><i class="icon-base bx bx-edit-alt me-1"></i>
+                                Details</a
+                              >
                             </div>
-                            <p class="mt-3">Your order has been placed successfully</p>
                           </div>
-                        </li>
-                        <li class="timeline-item timeline-item-transparent border-primary">
-                          <span class="timeline-point timeline-point-primary"></span>
-                          <div class="timeline-event">
-                            <div class="timeline-header">
-                              <h6 class="mb-0">Pick-up</h6>
-                              <small class="text-body-secondary">Wednesday 11:29 AM</small>
-                            </div>
-                            <p class="mt-3 mb-3">Pick-up scheduled with courier</p>
-                          </div>
-                        </li>
-                        <li class="timeline-item timeline-item-transparent border-primary">
-                          <span class="timeline-point timeline-point-primary"></span>
-                          <div class="timeline-event">
-                            <div class="timeline-header">
-                              <h6 class="mb-0">Dispatched</h6>
-                              <small class="text-body-secondary">Thursday 11:29 AM</small>
-                            </div>
-                            <p class="mt-3 mb-3">Item has been picked up by courier</p>
-                          </div>
-                        </li>
-                        <li class="timeline-item timeline-item-transparent border-primary">
-                          <span class="timeline-point timeline-point-primary"></span>
-                          <div class="timeline-event">
-                            <div class="timeline-header">
-                              <h6 class="mb-0">Package arrived</h6>
-                              <small class="text-body-secondary">Saturday 15:20 AM</small>
-                            </div>
-                            <p class="mt-3 mb-3">Package arrived at an Amazon facility, NY</p>
-                          </div>
-                        </li>
-                        <li class="timeline-item timeline-item-transparent border-dashed">
-                          <span class="timeline-point timeline-point-primary"></span>
-                          <div class="timeline-event">
-                            <div class="timeline-header">
-                              <h6 class="mb-0">Dispatched for delivery</h6>
-                              <small class="text-body-secondary">Today 14:12 PM</small>
-                            </div>
-                            <p class="mt-3 mb-3">Package has left an Amazon facility, NY</p>
-                          </div>
-                        </li>
-                        <li class="timeline-item timeline-item-transparent border-dashed">
-                          <span class="timeline-point timeline-point-primary"></span>
-                          <div class="timeline-event">
-                            <div class="timeline-header">
-                              <h6 class="mb-0">Package delivered</h6>
-                              <small class="text-body-secondary">Today 14:12 PM</small>
-                            </div>
-                            <p class="mt-3 mb-3">Package delivered to an Amazon facility, NY</p>
-                          </div>
-                        </li>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-4">
-                  <div class="card mb-6">
-                    <div class="card-header">
-                      <h5 class="card-title m-0">Driver Details</h5>
-                    </div>
-                    <div class="card-body">
-                      <div class="d-flex justify-content-start align-items-center mb-6">
-                        <div class="avatar me-3">
-                          <img src="../images/avatars/1.png" alt="Avatar" class="rounded-circle" />
-                        </div>
-                        <div class="d-flex flex-column">
-                          <a href="#" class="text-body text-nowrap">
-                            <h6 class="mb-0">Adebiyi Tobi</h6>
-                          </a>
-                          <span>Package Status: Deliverd</span>
-                        </div>
-                      </div>
-                      <div class="d-flex justify-content-between">
-                        <h6 class="mb-1">Contact info</h6>
-                      </div>
-                      <p class=" mb-0">Mobile: +1 (609) 972-22-22</p>
-                    </div>
-                  </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
+              <!--/ Bootstrap Table with Header Dark -->
             </div>
-            
             <!-- / Content -->
 
             <!-- Footer -->
@@ -655,15 +586,41 @@
     <script src="../vendor/libs/apex-charts/apexcharts.js"></script>
     <script src="../vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
 
-   
-
     <!-- Main JS -->
 
     <script src="../js/dashboard-main.js"></script>
 
     <!-- Page JS -->
     <script src="../js/app-logistics-dashboard.js"></script>
-    <script src="../js/app-ecommerce-order-details.js"></script>
+
+    <!-- Custom JavaScript Code -->
+    <script>
+      (function () {
+        document.addEventListener("DOMContentLoaded", function () {
+          const getDate = new Date();
+          const dateParagraph = Array.from(
+            document.querySelectorAll(".current-date")
+          );
+          dateParagraph.forEach((x) => {
+            x.textContent = getDate.toDateString();
+          });
+
+          // Pluralizing cards description
+          let allCards = document.getElementsByClassName('card-body');
+          allCards = Array.from(allCards);
+          allCards.forEach((eachCard) => {
+            let cardValue = eachCard.querySelector('.card-value');
+            let cardDescription = eachCard.querySelector('.card-description');
+            if (Number(cardValue.textContent) > 1) {
+              cardDescription.textContent = `${cardDescription.textContent}s`;
+            }
+
+        });
+
+        
+      });
+    })();
+    </script>
   </body>
 </html>
 

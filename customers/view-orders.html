@@ -18,10 +18,7 @@
     <title>Vedrive - View Order</title>
 
     <!-- Canonical SEO -->
-    <meta
-      name="description"
-      content="Vedrive - Logistics Made Easy"
-    />
+    <meta name="description" content="Vedrive - Logistics Made Easy" />
 
     <meta
       name="keywords"
@@ -67,12 +64,13 @@
       rel="stylesheet"
       href="../vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css"
     />
-    <link rel="stylesheet" href="../vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
-
+    <link
+      rel="stylesheet"
+      href="../vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css"
+    />
 
     <!-- Page CSS -->
 
-   
     <link
       rel="stylesheet"
       href="../vendor/css/pages/app-logistics-dashboard.css"
@@ -488,42 +486,72 @@
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
               <!-- Bootstrap Table with Header - Dark -->
-  <div class="card">
-    <h5 class="card-header">Orders from the last 30 Days</h5>
-    <div class="table-responsive text-nowrap">
-      <table class="table">
-        <thead class="table-dark">
-          <tr>
-            <th>Order ID</th>
-            <th>Date</th>
-            <th>Pickup Address</th>
-            <th>Destination</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody class="table-border-bottom-0">
-          <tr>
-            <td><i class="icon-base fab fa-angular icon-md text-danger me-4"></i> <span>#32543 </span></td>
-            <td><i class="icon-base fab fa-angular icon-md text-danger me-4"></i> <span>Mar 2, 2025 - 08:00am</span></td>
-            <td>No 27, Adekunle Ishola Street, Ketu</td>
-            <td>Lekki Phase 2, Lagos Island</td>
-            <td><span class="badge bg-label-info me-1">Scheduled</span></td>
-            <td>
-              <div class="dropdown">
-                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="icon-base bx bx-dots-vertical-rounded"></i></button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="order-details.html"><i class="icon-base bx bx-edit-alt me-1"></i> Details</a>
-                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-trash me-1"></i> Delete</a>
+              <div class="card">
+                <h5 class="card-header">Orders from the last 30 Days</h5>
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead class="table-dark">
+                      <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Pickup Address</th>
+                        <th>Destination</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td>
+                          <i
+                            class="icon-base fab fa-angular icon-md text-danger me-4"
+                          ></i>
+                          <span>#32543 </span>
+                        </td>
+                        <td>
+                          <i
+                            class="icon-base fab fa-angular icon-md text-danger me-4"
+                          ></i>
+                          <span>Mar 2, 2025 - 08:00am</span>
+                        </td>
+                        <td>No 27, Adekunle Ishola Street, Ketu</td>
+                        <td>Lekki Phase 2, Lagos Island</td>
+                        <td>
+                          <span class="badge bg-label-info me-1"
+                            >Scheduled</span
+                          >
+                        </td>
+                        <td>
+                          <div class="dropdown">
+                            <button
+                              type="button"
+                              class="btn p-0 dropdown-toggle hide-arrow"
+                              data-bs-toggle="dropdown"
+                            >
+                              <i
+                                class="icon-base bx bx-dots-vertical-rounded"
+                              ></i>
+                            </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="order-details.html"
+                                ><i class="icon-base bx bx-edit-alt me-1"></i>
+                                Details</a
+                              >
+                              <a
+                                class="dropdown-item"
+                                href="javascript:void(0);"
+                                ><i class="icon-base bx bx-trash me-1"></i>
+                                Delete</a
+                              >
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <!--/ Bootstrap Table with Header Dark -->
+              <!--/ Bootstrap Table with Header Dark -->
             </div>
             <!-- / Content -->
 
@@ -541,7 +569,8 @@
 
                     <a href="/" target="_blank" class="footer-link"
                       >Vedrive Logistics Limited</a
-                    > All Rights Reserved.
+                    >
+                    All Rights Reserved.
                   </div>
                 </div>
               </div>
@@ -587,8 +616,6 @@
     <!-- Vendors JS -->
     <script src="../vendor/libs/apex-charts/apexcharts.js"></script>
     <script src="../vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-
-   
 
     <!-- Main JS -->
 

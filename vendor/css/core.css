@@ -2367,8 +2367,8 @@ progress {
 }
 .table-dark {
   --bs-table-color: #fff;
-  --bs-table-bg: #2b2c40;
-  --bs-table-border-color: #444557;
+  --bs-table-bg: #0a5c59;
+  --bs-table-border-color: #0a5c59;
   --bs-table-striped-bg: #38394b;
   --bs-table-striped-color: #fff;
   --bs-table-active-bg: #3c3d4f;
@@ -8686,7 +8686,7 @@ img[data-app-light-img][data-app-dark-img] {
     var(--bs-table-bg)
   );
 }
-.table-dark {
+/*.table-dark {
   --bs-table-bg: rgba(var(--bs-dark-rgb), 0.2);
   --bs-table-hover-bg: color-mix(
     in sRGB,
@@ -8714,7 +8714,7 @@ img[data-app-light-img][data-app-dark-img] {
     var(--bs-table-color) 4%,
     var(--bs-table-bg)
   );
-}
+}*/
 .table-gray {
   --bs-table-bg: rgba(var(--bs-gray-rgb), 0.2);
   --bs-table-hover-bg: color-mix(
