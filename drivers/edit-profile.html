@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Vedrive - Order History</title>
+    <title>Vedrive - Edit Profile</title>
 
     <!-- Canonical SEO -->
     <meta
@@ -56,27 +56,18 @@
       href="../vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
     />
 
-    <!-- endbuild -->
+     <!-- endbuild -->
 
-    <link rel="stylesheet" href="../vendor/libs/apex-charts/apex-charts.css" />
-    <link
-      rel="stylesheet"
-      href="../vendor/libs/datatables-bs5/datatables.bootstrap5.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css"
-    />
-    <link rel="stylesheet" href="../vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+     <link rel="stylesheet" href="../vendor/libs/select2/select2.css" />
+     <link rel="stylesheet" href="../vendor/libs/%40form-validation/form-validation.css" />
+     <link rel="stylesheet" href="../vendor/libs/animate-css/animate.css" />
+     <link rel="stylesheet" href="../vendor/libs/sweetalert2/sweetalert2.css" />
 
 
     <!-- Page CSS -->
 
    
-    <link
-      rel="stylesheet"
-      href="../vendor/css/pages/app-logistics-dashboard.css"
-    />
+    <link rel="stylesheet" href="../vendor/css/pages/page-profile.css" />
 
     <!-- Helpers -->
     <script src="../vendor/js/helpers.js"></script>
@@ -129,54 +120,29 @@
               </a>
             </li>
 
-            <!-- Layouts -->
-            <li class="menu-item active open">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon icon-base bx bx-cart-alt"></i>
-                <div>Orders</div>
-              </a>
-
-              <ul class="menu-sub">
-                <li class="menu-item">
-                  <a href="view-orders.html" class="menu-link">
-                    <div>View Orders</div>
-                  </a>
-                </li>
-                <li class="menu-item">
-                  <a href="create-new-order.html" class="menu-link">
-                    <div>Create New Order</div>
-                  </a>
-                </li>
-                <li class="menu-item active">
-                  <a href="order-history.html" class="menu-link">
-                    <div>Order History</div>
-                  </a>
-                </li>
-              </ul>
-            </li>
-
             <!-- Front Pages -->
             <li class="menu-item">
-              <a href="tracking.html" class="menu-link">
-                <i class="menu-icon icon-base bx bx-map-pin"></i>
-                <div>Tracking</div>
+              <a href="deliveries.html" class="menu-link">
+                <i class="menu-icon icon-base bx bx-cart-alt"></i>
+                <div>My Deliveries</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="transactions.html" class="menu-link">
-                <i class="menu-icon icon-base bx bx-money"></i>
-                <div>Transactions</div>
+              <a href="#" class="menu-link">
+                <i class="menu-icon icon-base bx bx-map-pin"></i>
+                <div>Deliveries Start/End</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="help.html" class="menu-link">
-                <i class="menu-icon icon-base bx bx-support"></i>
-                <div>Help</div>
+              <a href="map.html" class="menu-link">
+                <i class="menu-icon icon-base bx bx-bxs-map"></i>
+                <div>Map</div>
               </a>
             </li>
-            <li class="menu-item">
-              <a href="profile.html" class="menu-link">
+            
+            <li class="menu-item active">
+              <a href="#" class="menu-link">
                 <i class="menu-icon icon-base bx bx-user"></i>
                 <div>Profile</div>
               </a>
@@ -487,43 +453,103 @@
           <div class="content-wrapper">
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- Bootstrap Table with Header - Dark -->
-  <div class="card">
-    <h5 class="card-header">Orders from the last 30 Days</h5>
-    <div class="table-responsive text-nowrap">
-      <table class="table">
-        <thead class="table-dark">
-          <tr>
-            <th>Order ID</th>
-            <th>Date</th>
-            <th>Pickup Address</th>
-            <th>Destination</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody class="table-border-bottom-0">
-          <tr>
-            <td><i class="icon-base fab fa-angular icon-md text-danger me-4"></i> <span>#32543 </span></td>
-            <td><i class="icon-base fab fa-angular icon-md text-danger me-4"></i> <span>Mar 2, 2025 - 08:00am</span></td>
-            <td>No 27, Adekunle Ishola Street, Ketu</td>
-            <td>Lekki Phase 2, Lagos Island</td>
-            <td><span class="badge bg-label-info me-1">Scheduled</span></td>
-            <td>
-              <div class="dropdown">
-                <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i class="icon-base bx bx-dots-vertical-rounded"></i></button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="order-details.html"><i class="icon-base bx bx-edit-alt me-1"></i> Details</a>
-                  <a class="dropdown-item" href="javascript:void(0);"><i class="icon-base bx bx-trash me-1"></i> Delete</a>
+             
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="card mb-6">
+                    <!-- Account -->
+                    <div class="card-body">
+                      <div class="d-flex align-items-start align-items-sm-center gap-6 pb-4 border-bottom">
+                        <img src="../images/avatars/1.png" alt="user-avatar" class="d-block w-px-100 h-px-100 rounded" id="uploadedAvatar" />
+                        <div class="button-wrapper">
+                          <label for="upload" class="btn btn-primary me-3 mb-4" tabindex="0">
+                            <span class="d-none d-sm-block">Upload new photo</span>
+                            <i class="icon-base bx bx-upload d-block d-sm-none"></i>
+                            <input type="file" id="upload" class="account-file-input" hidden accept="image/png, image/jpeg" />
+                          </label>
+                          <button type="button" class="btn btn-label-secondary account-image-reset mb-4">
+                            <i class="icon-base bx bx-reset d-block d-sm-none"></i>
+                            <span class="d-none d-sm-block">Reset</span>
+                          </button>
+            
+                          <div>Allowed JPG, GIF or PNG. Max size of 800K</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body pt-4">
+                      <form id="formAccountSettings" method="GET" onsubmit="return false">
+                        <div class="row g-6">
+                          <div class="col-md-6 form-control-validation">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input class="form-control" type="text" id="firstName" name="firstName" value="John" autofocus />
+                          </div>
+                          <div class="col-md-6 form-control-validation">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input class="form-control" type="text" name="lastName" id="lastName" value="Doe" />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input class="form-control" type="text" id="email" name="email" value="john.doe@example.com" placeholder="john.doe@example.com" />
+                          </div>
+                          <div class="col-md-6">
+                            <label class="form-label" for="phoneNumber">Phone Number</label>
+                            <div class="input-group input-group-merge">
+                              <span class="input-group-text">NG (+234)</span>
+                              <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="81333333333" />
+                            </div>
+                          </div>
+                          
+                          <div class="col-md-6">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Address" />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="state" class="form-label">State</label>
+                            <input class="form-control" type="text" id="state" name="state" placeholder="Lagos" />
+                          </div>
+                          <div class="col-md-6">
+                            <label for="country" class="form-label">Country</label>
+                            <input type="text" class="form-control" id="country" name="country" value="Nigeria" maxlength="6" readonly/>
+                          </div>
+                          <div class="col-md-6">
+                            <label for="language" class="form-label">Language</label>
+                            <select id="language" class="select2 form-select">
+                              <option value="">Select Language</option>
+                              <option value="en">English</option>
+                              <option value="yor">Yoruba</option>
+                              <option value="de">Igbo</option>
+                              <option value="pt">Hausa</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="mt-6">
+                          <button type="submit" class="btn btn-primary me-3">Save changes</button>
+                          <button type="reset" class="btn btn-label-secondary">Cancel</button>
+                        </div>
+                      </form>
+                    </div>
+                    <!-- /Account -->
+                  </div>
+                  <div class="card">
+                    <h5 class="card-header">Delete Account</h5>
+                    <div class="card-body">
+                      <div class="mb-6 col-12 mb-0">
+                        <div class="alert alert-warning">
+                          <h5 class="alert-heading mb-1">Are you sure you want to delete your account?</h5>
+                          <p class="mb-0">Once you delete your account, there is no going back. Please be certain.</p>
+                        </div>
+                      </div>
+                      <form id="formAccountDeactivation" onsubmit="return false">
+                        <div class="form-check my-8 ms-2">
+                          <input class="form-check-input" type="checkbox" name="accountActivation" id="accountActivation" />
+                          <label class="form-check-label" for="accountActivation">I confirm my account deactivation</label>
+                        </div>
+                        <button type="submit" class="btn btn-danger deactivate-account" disabled>Deactivate Account</button>
+                      </form>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <!--/ Bootstrap Table with Header Dark -->
             </div>
             <!-- / Content -->
 
@@ -595,8 +621,7 @@
     <script src="../js/dashboard-main.js"></script>
 
     <!-- Page JS -->
-    <script src="../js/app-logistics-dashboard.js"></script>
-    <script src="../js/app-ecommerce-order-list.js"></script>
+    <script src="../js/pages-account-settings-account.js"></script>
   </body>
 </html>
 

@@ -15,7 +15,7 @@
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
     />
 
-    <title>Vedrive - My Deliveries</title>
+    <title>Vedrive - My Profile</title>
 
     <!-- Canonical SEO -->
     <meta name="description" content="Vedrive - Logistics Made Easy" />
@@ -71,6 +71,7 @@
       rel="stylesheet"
       href="../vendor/css/pages/app-logistics-dashboard.css"
     />
+    <link rel="stylesheet" href="../vendor/css/pages/page-profile.css" />
 
     <!-- Helpers -->
     <script src="../vendor/js/helpers.js"></script>
@@ -124,7 +125,7 @@
             </li>
 
             <!-- Front Pages -->
-            <li class="menu-item active">
+            <li class="menu-item">
               <a href="deliveries.html" class="menu-link">
                 <i class="menu-icon icon-base bx bx-cart-alt"></i>
                 <div>My Deliveries</div>
@@ -144,14 +145,14 @@
               </a>
             </li>
             
-            <li class="menu-item">
+            <li class="menu-item active">
               <a href="#" class="menu-link">
                 <i class="menu-icon icon-base bx bx-user"></i>
                 <div>Profile</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="#" class="menu-link">
+              <a href="/" class="menu-link">
                 <i class="menu-icon icon-base bx bx-log-out"></i>
                 <div>Logout</div>
               </a>
@@ -456,147 +457,66 @@
           <div class="content-wrapper">
             <!-- Content -->
             <div class="container-xxl flex-grow-1 container-p-y">
-              <!-- Bootstrap Table with Header - Dark -->
-              <div class="card">
-                <h5 class="card-header">Deliveries</h5>
-                <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead class="table-dark">
-                      <tr>
-                        <th>Order ID</th>
-                        <th>Date</th>
-                        <th>Pickup Address</th>
-                        <th>Destination</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0">
-                      <tr>
-                        <td>
-                          <i
-                            class="icon-base fab fa-angular icon-md text-danger me-4"
-                          ></i>
-                          <span>#32543 </span>
-                        </td>
-                        <td>
-                          <i
-                            class="icon-base fab fa-angular icon-md text-danger me-4"
-                          ></i>
-                          <span>Mar 2, 2025 - 08:00am</span>
-                        </td>
-                        <td>No 27, Adekunle Ishola Street, Ketu</td>
-                        <td>Lekki Phase 2, Lagos Island</td>
-                        <td>
-                          <span class="badge bg-label-success me-1"
-                            >Delivered</span
-                          >
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              type="button"
-                              class="btn p-0 dropdown-toggle hide-arrow"
-                              data-bs-toggle="dropdown"
-                            >
-                              <i
-                                class="icon-base bx bx-dots-vertical-rounded"
-                              ></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="delivery-details.html"
-                                ><i class="icon-base bx bx-edit-alt me-1"></i>
-                                Details</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <i
-                            class="icon-base fab fa-angular icon-md text-danger me-4"
-                          ></i>
-                          <span>#32560 </span>
-                        </td>
-                        <td>
-                          <i
-                            class="icon-base fab fa-angular icon-md text-danger me-4"
-                          ></i>
-                          <span>Mar 15, 2025 - 01:30pm</span>
-                        </td>
-                        <td>No 27, Adekunle Ishola Street, Ketu</td>
-                        <td>Alagomeji Street, Yaba,</td>
-                        <td>
-                          <span class="badge bg-label-danger me-1"
-                            >Cancelled</span
-                          >
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              type="button"
-                              class="btn p-0 dropdown-toggle hide-arrow"
-                              data-bs-toggle="dropdown"
-                            >
-                              <i
-                                class="icon-base bx bx-dots-vertical-rounded"
-                              ></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="delivery-details.html"
-                                ><i class="icon-base bx bx-edit-alt me-1"></i>
-                                Details</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <i
-                            class="icon-base fab fa-angular icon-md text-danger me-4"
-                          ></i>
-                          <span>#32543 </span>
-                        </td>
-                        <td>
-                          <i
-                            class="icon-base fab fa-angular icon-md text-danger me-4"
-                          ></i>
-                          <span>Apr 3, 2025 - 03:00pm</span>
-                        </td>
-                        <td>No 27, Adekunle Ishola Street, Ketu</td>
-                        <td>Lekki Phase 2, Lagos Island</td>
-                        <td>
-                          <span class="badge bg-label-info me-1"
-                            >Pending</span
-                          >
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button
-                              type="button"
-                              class="btn p-0 dropdown-toggle hide-arrow"
-                              data-bs-toggle="dropdown"
-                            >
-                              <i
-                                class="icon-base bx bx-dots-vertical-rounded"
-                              ></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="delivery-details.html"
-                                ><i class="icon-base bx bx-edit-alt me-1"></i>
-                                Details</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+             <!-- Header -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-6">
+        <div class="user-profile-header-banner">
+          <img src="../images/profile-banner.png" alt="Banner image" class="rounded-top" />
+        </div>
+        <div class="user-profile-header d-flex flex-column flex-lg-row text-sm-start text-center mb-8">
+          <div class="flex-shrink-0 mt-1 mx-sm-0 mx-auto">
+            <img src="../images/avatars/1.png" alt="user image" class="d-block h-auto ms-0 ms-sm-6 rounded-3 user-profile-img" />
+          </div>
+          <div class="flex-grow-1 mt-3 mt-lg-5">
+            <div class="d-flex align-items-md-end align-items-sm-start align-items-center justify-content-md-between justify-content-start mx-5 flex-md-row flex-column gap-4">
+              <div class="user-profile-info">
+                <h4 class="mb-2 mt-lg-7">John Doe</h4>
+                <ul class="list-inline mb-0 d-flex align-items-center flex-wrap justify-content-sm-start justify-content-center gap-4 mt-4">
+                  <li class="list-inline-item"><i class="icon-base bx bx-map me-2 align-top"></i><span class="fw-medium">Lagos,Nigeria</span></li>
+                  <li class="list-inline-item"><i class="icon-base bx bx-calendar me-2 align-top"></i><span class="fw-medium"> Joined April 2024</span></li>
+                </ul>
               </div>
-              <!--/ Bootstrap Table with Header Dark -->
+              <a href="edit-profile.html" class="btn btn-primary mb-1"> Edit Profile </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Header -->
+  <!-- User Profile Content -->
+  <div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6">
+      <!-- About User -->
+      <div class="card mb-6">
+        <div class="card-body">
+          <small class="card-text text-uppercase text-body-secondary small">About</small>
+          <ul class="list-unstyled my-3 py-1">
+            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-user"></i><span class="fw-medium mx-2">Full Name:</span> <span>John Doe</span></li>
+            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-check"></i><span class="fw-medium mx-2">Status:</span> <span>Active</span></li>
+            <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-flag"></i><span class="fw-medium mx-2">Country:</span> <span>Nigeria</span></li>
+            <li class="d-flex align-items-center mb-2"><i class="icon-base bx bx-detail"></i><span class="fw-medium mx-2">Languages:</span> <span>Yoruba, English</span></li>
+          </ul>
+        </div>
+      </div>
+      <!--/ About User -->
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6">
+        <!-- About User -->
+        <div class="card mb-6">
+          <div class="card-body">
+            <small class="card-text text-uppercase text-body-secondary small">Contacts</small>
+            <ul class="list-unstyled my-3 py-1">
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-phone"></i><span class="fw-medium mx-2">Contact:</span> <span>(123) 456-7890</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-chat"></i><span class="fw-medium mx-2">Skype:</span> <span>john.doe</span></li>
+              <li class="d-flex align-items-center mb-4"><i class="icon-base bx bx-envelope"></i><span class="fw-medium mx-2">Email:</span> <span>john.doe@example.com</span></li>
+            </ul>
+          </div>
+        </div>
+        <!--/ About User -->
+        </div>
+      </div>
             </div>
             <!-- / Content -->
 
